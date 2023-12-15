@@ -1,113 +1,338 @@
-import Image from 'next/image'
+"use client";
 
+import { useState } from "react";
+
+import Image from "next/image";
+import Second from "../public/images/image2.jpg";
+import First1 from "../public/images/image1.png";
+import Five from "../public/images/3rd.png";
+import Third from "../public/images/4th.png";
+import Fourth from "../public/images/5th.png";
 export default function Home() {
+  const [isExpanded, setExpanded] = useState(false);
+
+  const toggleExpand = () => {
+    setExpanded(!isExpanded);
+  };
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="pt-24 ">
+      <div
+        className="flex items-center justify-center flex-col bg-gradient-to-b from-fdf4ef to-white"
+        id="in this div all things should be placed"
+      >
+        <div className="py-1 px-2.5 uppercase text-sm bg-white rounded w-fit ">
+          Welcome to Manage wise
+        </div>
+        <div className="text-7xl mt-5 font-semibold">
+          Empower your business with <br />
+          <span className="block pt-4 pb-8 text-center">
+            <span className="text-orange-400">Strategic</span> insights
+          </span>
+        </div>
+        <div className="text-xl opacity-70">
+          Powerful management platform designed to streamline your business{" "}
+          <br />
+          <span className="block text-center">
+            <span className="">
+              operations, boost productivity, and drive success
+            </span>
+          </span>
+        </div>
+        <div className="pt-8 ">
+          <button className="mx-3 bg-purple-600 text-white font-bold px-10 py-4 border-2 rounded-lg">
+            Get Started
+          </button>
+          <button className="mx-3 bg-white font-bold px-10 py-4 rounded-lg  border-2 border-black">
+            Watch Demo
+          </button>
+        </div>
+        <div>
+          <Image
+            src={First1}
+            alt="hello"
+            className=" flex items-center justify-center px-0 pt-14 pb-24 hover:scale-105"
+          ></Image>
         </div>
       </div>
+      <div
+        className="flex items-center justify-center flex-col bg-white "
+        id="in this div all things should be placed"
+      >
+        <div className="flex justify-center items-center flex-col pt-20 pb-8 mb-4">
+          <div className=" py-1 px-2.5  w-fit  bg-white rounded-lg text-xs mb-2">
+            <p>PREMIER FEATURES</p>
+          </div>
+          <div className="mb-2">
+            <h2 className=" text-5xl">
+              Discover our products&apos;s{" "}
+              <span className=" text-orange-500">Capabilities</span>{" "}
+            </h2>
+          </div>
+          <div className="opacity-70">
+            <p>
+              Don&apos;t settle for mediocrity - embrace the future of
+              management
+            </p>
+            <p className=" text-center">with Manage Wise.</p>
+          </div>
+        </div>
+        <div className=" pb-24 flex ">
+          <div className=" pt-20 pr-11 pb-9 pl-9 w-fit flex flex-col bg-purple-100 rounded-3xl">
+            <div className="mb-2 flex items-center ">icon</div>
+            <div>
+              <h3 className=" text-4xl">
+                Boost productivity and <br /> streamline workflow with <br />
+                us. Enjoy our intuitive <br />
+                interface and robust <br />
+                features.
+              </h3>
+            </div>
+          </div>
+          <div className=" ml-8 rounded-3xl bg-white">
+            <Image
+              src={Second}
+              alt="second"
+              width={600}
+              className=" rounded-3xl"
+            />
+            <div className="pl-10">
+              <p className=" text-xl font-semibold">Smart Task Management</p>
+              <p className="mb-5">
+                Say goodbye to chaos with our smart task management system
+              </p>
+            </div>
+          </div>
+        </div>
+        {
+          //NOTE - Here the cards div started
+        }
+        <div className="flex pr-40 pl-40 pb-32  ">
+          <div className=" border rounded-3xl pr-0 mr-6">
+            <Image src={Third} alt="3rd" width={450} />
+            <div className=" p-7">
+              <p className=" font-bold text-lg">Flexible Scheduling</p>
+              <p className="opacity-70">
+                Stay productive with our flexible <br />
+                scheduling system
+              </p>
+            </div>
+          </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+          <div className="border rounded-3xl pr-0 mr-6">
+            <Image src={Fourth} alt="4th" width={450} />
+            <div className=" p-7">
+              <p className=" font-bold text-lg">Easy Communication</p>
+              <p className="opacity-70">
+                Collaborate seamlessly with your team <br /> in real-time
+              </p>
+            </div>
+          </div>
+
+          <div className="border rounded-3xl pr-0">
+            <Image src={Five} alt="5th" width={450} />
+            <div className=" p-7">
+              <p className=" font-bold text-lg">Analytics</p>
+              <p className="opacity-70">
+                Gain valuable insights with our advanced <br /> analytics
+                feature
+              </p>
+            </div>
+          </div>
+        </div>
+        {
+          //!SECTION =  dark theme here
+        }
+
+        <div className="flex flex-col bg-1c1c1c w-full py-32 px-36">
+          <div className=" py-1 px-2.5  w-fit  bg-white rounded-lg text-xs mb-7">
+            <p className=" text-purple-500 text-lg capitalize font-medium">
+              🤩 And more
+            </p>
+          </div>
+          <div>
+            <p className=" text-5xl text-fdf2ec mb-2 font-semibold">
+              Explore an array of features that elevate your{" "}
+            </p>
+            <p className="text-fdf2ec text-5xl font-semibold mb-4">
+              <span className=" text-red-400">Productivity </span>to new heights
+            </p>
+            <p className="text-white opacity-60 text-xl">
+              Discover the tools that will revolutionize the way you{" "}
+            </p>
+            <p className="text-white opacity-60 text-xl">
+              manage and optimize your operations
+            </p>
+          </div>
+          <div className="flex  pb-32 pt-24">
+            <div className=" rounded-3xl pr-0 text-white bg-212121 mr-10">
+              <div className=" p-10 pb-0 text-center ">
+                <p className=" text-6xl mb-2">👨‍💻</p>
+                <p className=" font-bold text-2xl mb-2">
+                  Cross-Platform <br />
+                  Compatibility
+                </p>
+                <p className="opacity-70">
+                  Enjoy the flexibility of cross-platform compatibility. Our
+                  product works <br /> seamlessly across desktop, web, and{" "}
+                  <br /> mobile devices, allowing you to work <br />
+                  from your preferred device.
+                </p>
+              </div>
+            </div>
+            <div className=" rounded-3xl pr-0 text-white bg-212121 mr-10  ">
+              <div className=" p-10 text-center ">
+                <p className=" text-6xl mb-2">👨‍💻</p>
+                <p className=" font-bold text-2xl mb-2">
+                  Stay Informed with Essential Notifications
+                </p>
+                <p className="opacity-70">
+                  Automate support from first customer <br /> contact to closing
+                  the ticket. Drastically
+                  <br /> improve time to resolution.Automate <br />
+                  support from first customer contact to <br /> closing the
+                  ticket.
+                </p>
+              </div>
+            </div>
+            <div className=" rounded-3xl pr-0 text-white bg-212121 ">
+              <div className=" p-10 text-center ">
+                <p className=" text-6xl mb-2">👨‍💻</p>
+                <p className=" font-bold text-2xl mb-2">
+                  Secure Data Encryption <br /> at all times
+                </p>
+                <p className="opacity-70">
+                  Trust in our robust data encryption <br /> to keep your
+                  sensitive information safe and secure. Rest easy knowing your
+                  data is <br />
+                  protected at all times.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="flex justify-center items-center flex-col">
+              <div className=" py-1 px-2.5  w-fit  bg-white rounded-lg text-xs mb-7 ">
+                <p className=" text-purple-500 text-lg capitalize font-semibold ">
+                  ✂️ INTEGRATION
+                </p>
+              </div>
+              <div>
+                <h4 className="text-6xl text-fdf2ec text-bold mb-4">
+                  Enable <span className=" text-orange-600">integration</span>{" "}
+                  with <br /> other popular tools and <br />{" "}
+                  <div className=" text-center">platforms</div>
+                </h4>
+                <p className=" text-center opacity-50 text-white text-lg">
+                  Seamlessly connect and amplify your workflow <br /> by
+                  enabling integration with a diverse array of <br />{" "}
+                  widely-used tools and platforms.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {
+          //NOTE - Ask me answer section starts here
+        }
+        <div className=" pt-36 pb-32 bg-white w-full ">
+          <div className="flex mx-52">
+            <div id="for need answer " className=" mr-32">
+              <div className=" py-1 px-2.5  w-fit  bg-white rounded-lg text-xs mb-7 border flex justify-start">
+                <p className=" text-purple-500 text-md capitalize font-medium">
+                  🙋🏻‍♂️ FAQ
+                </p>
+              </div>
+              <h5 className=" text-5xl font-semibold">Need</h5>
+              <h5 className=" text-5xl font-semibold text-amber-600 mb-7">
+                Answers ?
+              </h5>
+              <p className=" text-xl opacity-60 font-medium">
+                Check out our most commonly
+                <br />
+                asked questions below to find the
+                <br />
+                information you need.
+              </p>
+            </div>
+            <div id="for question and answer">
+              <div className=" w-fit bg-f7f8fd p-4 mb-4 rounded-3xl">
+                <h1
+                  className="cursor-pointer text-2xl font-semibold mb-4"
+                  onClick={toggleExpand}
+                >
+                  What is Manage Wise and What does it offer ?
+                </h1>
+                {isExpanded && (
+                  <p className="text-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque vel eleifend ligula.
+                  </p>
+                )}
+              </div>
+              <div className=" w-fit bg-f7f8fd p-4 mb-4 rounded-3xl">
+                <h1
+                  className="cursor-pointer text-2xl font-semibold mb-4"
+                  onClick={toggleExpand}
+                >
+                  What is Manage Wise and What does it offer ?
+                </h1>
+                {isExpanded && (
+                  <p className="text-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque vel eleifend ligula.
+                  </p>
+                )}
+              </div>
+              <div className=" w-fit bg-f7f8fd p-4 mb-4 rounded-3xl">
+                <h1
+                  className="cursor-pointer text-2xl font-semibold mb-4"
+                  onClick={toggleExpand}
+                >
+                  What is Manage Wise and What does it offer ?
+                </h1>
+                {isExpanded && (
+                  <p className="text-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque vel eleifend ligula.
+                  </p>
+                )}
+              </div>
+              <div className=" w-fit bg-f7f8fd p-4 mb-4 rounded-3xl">
+                <h1
+                  className="cursor-pointer text-2xl font-semibold mb-4"
+                  onClick={toggleExpand}
+                >
+                  What is Manage Wise and What does it offer ?
+                </h1>
+                {isExpanded && (
+                  <p className="text-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque vel eleifend ligula.
+                  </p>
+                )}
+              </div>
+              <div className=" w-fit bg-f7f8fd p-4 rounded-3xl">
+                <h1
+                  className="cursor-pointer text-2xl font-semibold mb-4"
+                  onClick={toggleExpand}
+                >
+                  What is Manage Wise and What does it offer ?
+                </h1>
+                {isExpanded && (
+                  <p className="text-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque vel eleifend ligula.
+                  </p>
+                )}
+              </div>
+
+            </div>
+          </div>
+        </div>
+        {
+          //NOTE - last here
+        }
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </div>
+  );
 }
