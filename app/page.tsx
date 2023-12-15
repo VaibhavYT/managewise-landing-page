@@ -325,8 +325,23 @@ export default function Home() {
                   </p>
                 )}
               </div>
-
             </div>
+          </div>
+        </div>
+        {
+          //NOTE - Price section here
+        }
+        <div className=" pt-20 pb-28 flex justify-center items-center w-full">
+          <div className="">
+            <div className=" py-1 px-2.5  w-fit  bg-white rounded-lg text-xs mb-7 border text-center">
+              <p className=" text-purple-500 text-md  font-semibold capitalize">
+                💲PRICING
+              </p>
+            </div>
+            <h2 className="mb-7 text-6xl font-medium">Select your ideal <span className=" text-orange-400">Pricing</span> plan</h2>
+            <p className=" text-xl opacity-60 font-medium text-center">
+            At Manage Wise, we believe in providing you with <br />pricing plans that adapt to your unique needs.
+            </p>
           </div>
         </div>
         {
