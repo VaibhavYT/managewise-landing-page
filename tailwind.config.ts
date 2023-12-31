@@ -19,6 +19,9 @@ const config: Config = {
         'fdf2ec': '#FDF2EC',
         '212121': '#212121',
         'f7f8fd' : '#F7F8FD'
+      },
+      fontSize:{
+        '68':'68px'
       }
     },
   },
